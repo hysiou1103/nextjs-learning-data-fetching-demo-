@@ -8,6 +8,7 @@ type User = {
 
 export default async function UsersPage() {
   // 直接使用 async / await 在 server 端進行資料獲取，無需使用 useState / useEffect
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch('https://jsonplaceholder.typicode.com/users');
   const users = await response.json();
   console.log(users);
