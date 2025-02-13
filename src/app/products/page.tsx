@@ -8,6 +8,8 @@ type Product = {
 // 重整 /products 會看到價格並沒有更新，且終端機不會再印出 "Request received" 
 // 但本專案使用 Next.js 15 ，且這個版本已經沒有 default cacheing
 export default async function ProductPage(){
+    // const detailResponse = await fetch('http://localhost:3100/products/1');
+    // const detail: Product = await detailResponse.json();
     // 運行 node server
     const response = await fetch('http://localhost:3100/products');
     const products: Product[] = await response.json();
@@ -17,6 +19,7 @@ export default async function ProductPage(){
                 <h2 className="text-xl font-semibold">{product.title}</h2>
                 <p>{product.description}</p>
                 <p className="text-lg font-medium">${product.price}</p>
+                {/* <p>{detail.price}</p> */}
             </li>
         ))}
     </ul>
