@@ -1,10 +1,9 @@
-// 模擬資料庫，每個 key 都會成為 API 的 Endpoint
 {
   "products": [
     {
       "id": 1,
       "title": "Product 1",
-      "price": 700,
+      "price": 800,
       "description": "Description 1"
     },
     {
